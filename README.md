@@ -22,7 +22,7 @@
 需要 **Node.js ≥ 18**（用到内置 `fetch`）。
 
 ```bash
-git clone https://github.com/<你的用户名>/wiki-ai-proxy.git
+git clone https://github.com/Pigeon0129/ecwiki-ai-proxy.git
 cd wiki-ai-proxy
 
 cp .env.example .env
