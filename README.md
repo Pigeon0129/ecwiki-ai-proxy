@@ -166,21 +166,8 @@ response.completed                  model: qwen3.7-plus
 done
 ```
 
-### 两个工具（均由上游执行）
 
-| 工具 | 参数 | 作用 |
-|---|---|---|
-| `query_page` | `{keyword}` | 全文检索 Wiki，返回命中页面列表 |
-| `open_page_context` | `{page_name, keyword, context_lines}` | 抓取命中正则的段落上下文 |
 
-它们**在上游执行**，我们只收到通知，不需要也不应该代跑。
-
-### 鉴权要点
-
-- 靠 Cookie，**不是 Bearer token**；未登录返回 `401 {"success":false,"message":"用户未登录"}`。
-- Cookie `Domain=.wiki.easecation.net`（带前导点），所以能跨 `api.` 和 `service.` 子域。
-- 上游校验 `Origin`：预检只放行 `https://wiki.easecation.net`，代理已伪造该头。
-- 登录是 MediaWiki 原生表单（``wpName`/`wpPassword`），**没有 OAuth / SSO**，所以无法免登录使用。
 
 ## 限制与注意事项
 
