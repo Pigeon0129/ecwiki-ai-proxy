@@ -45,10 +45,6 @@ cp .env.example .env
    WIKI_COOKIE=ec_wiki_session=xxxx; ec_wikiUserName=xxxx; ec_wikiUserID=12345
    ```
 
-   > ⚠️ **不要找 `ec_wikiToken`，它不是一个真实 cookie。**
-   > 它只会出现在 MediaWiki 登出流程的 `=deleted` 清除指令里，是清理逻辑用的固定名字。
-   > 只带 `ec_wiki_session` 一条会返回 401，必须三个一起带。
-
 ### 启动
 
 ```bash
@@ -188,12 +184,8 @@ done
 
 ## 限制与注意事项
 
-- **每日额度仅 10 次**（`daily_limit: 10`，UTC 16:00 重置）。实测一次提问可能消耗多次额度，
-  因为工具调用也算。多人共用会立刻打光。
-- **仅限个人使用。** Cookie 是个人账号凭据，公开部署等于把你的账号额度与责任转给别人，
-  且很可能违反 Wiki 使用条款。**不要部署到公网、不要分享你的 Cookie。**
-- 上游跑在阿里云函数计算上，冷启动与超时受平台约束。
-- 上游接口可能随时变动 —— 这不是官方 API，是逆向出来的。
+- **每日额度仅 10 次**（`daily_limit: 10`，UTC 16:00 重置）。
+- **仅限个人使用。** 
 
 ## 免责声明
 
