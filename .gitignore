@@ -1,0 +1,32 @@
+# 依赖
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+
+# 环境变量 / 凭据 —— 绝对不能提交
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+
+# 运行产物
+*.log
+logs/
+npm-debug.log*
+yarn-error.log*
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+~$*
+*.orig
+
+# 临时文件
+tmp/
+temp/
+*.tmp
