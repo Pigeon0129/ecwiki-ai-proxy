@@ -1,9 +1,8 @@
 # ecwiki-ai-proxy
+![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
 把 [EaseCation Wiki](https://wiki.easecation.net) 站内 AI 助手 反代成 **OpenAI 兼容接口**，
 让你能在 ChatGPT-Next-Web / LobeChat / Cherry Studio / 任何 OpenAI SDK 里直接用它。
-
-零依赖（只用 Node 内置模块），单文件，约 400 行。
 
 ---
 
