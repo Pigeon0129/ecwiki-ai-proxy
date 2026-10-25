@@ -23,7 +23,7 @@
 
 ```bash
 git clone https://github.com/Pigeon0129/ecwiki-ai-proxy.git
-cd wiki-ai-proxy
+cd ecwiki-ai-proxy
 
 cp .env.example .env
 # 编辑 .env，填入 WIKI_COOKIE
