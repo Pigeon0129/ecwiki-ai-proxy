@@ -1,4 +1,4 @@
-# wiki-ai-proxy
+# ecwiki-ai-proxy
 
 把 [EaseCation Wiki](https://wiki.easecation.net) 站内 AI 助手 反代成 **OpenAI 兼容接口**，
 让你能在 ChatGPT-Next-Web / LobeChat / Cherry Studio / 任何 OpenAI SDK 里直接用它。
